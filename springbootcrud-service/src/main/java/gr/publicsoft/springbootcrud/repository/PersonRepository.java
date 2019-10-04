@@ -14,6 +14,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:9000")
 @RepositoryRestResource
 public interface PersonRepository extends JpaRepository<Person, Long> {
+    
 
     Person findByEmail(String email);
 
