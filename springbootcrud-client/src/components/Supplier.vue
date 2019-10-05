@@ -1,5 +1,5 @@
 <template>
-  <el-dialog type="warning" title="Διαχείριση Χρήστη" :visible="visible" :modal="true"
+  <el-dialog type="warning" title="Διαχείριση Προμηθευτή" :visible="visible" :modal="true"
              :close-on-click-modal="false"
              :close-on-press-escape="false" :modal-append-to-body="false" :show-close="false" width="75%"
              @close="clearValidation">
@@ -12,30 +12,52 @@
         <el-col :span="12">
 
           <el-form-item label="Εισάγετε το όνομα"
-                        prop="name">
+                        prop="firstName">
             <el-input prefix-icon="fa fa-user"
-                      v-model="supplier.name"
+                      v-model="supplier.firstName"
                       placeholder="Όνομα"
                       autoComplete="name">
             </el-input>
           </el-form-item>
 
-          <el-form-item label="Εισάγετε αριθμό κινητού τηλεφώνου"
-                        prop="mobilePhone">
-            <el-input prefix-icon="fa fa-phone"
-                      v-model="supplier.mobilePhone"
-                      placeholder="Κινητό Τηλέφωνο"
-                      autoComplete="tel">
+          <el-form-item label="Εισάγετε το επώνυμο"
+                        prop="lastName">
+            <el-input prefix-icon="fa fa-user"
+                      v-model="supplier.lastName"
+                      placeholder="επώνυμο"
+                      autoComplete="name">
             </el-input>
           </el-form-item>
 
-          <el-form-item label="Εισάγετε τη διεύθυνση Email"
-                        prop="email">
-            <el-input prefix-icon="fa fa-envelope"
-                      v-model="supplier.email"
-                      type="email"
-                      placeholder="Email"
-                      autoComplete="email">
+          <el-form-item label="Διεύθυνση"
+                        prop="address">
+            <el-input prefix-icon="fa fa-user"
+                      v-model="supplier.address"
+                      placeholder="Διεύθυνση">
+            </el-input>
+          </el-form-item>
+
+          <el-form-item label="Πόλη"
+                        prop="city">
+            <el-input prefix-icon="fa fa-user"
+                      v-model="supplier.city"
+                      placeholder="Πόλη">
+            </el-input>
+          </el-form-item>
+
+          <el-form-item label="T.K."
+                        prop="zipCode">
+            <el-input prefix-icon="fa fa-user"
+                      v-model="supplier.zipCode"
+                      placeholder="T.K.">
+            </el-input>
+          </el-form-item>
+
+          <el-form-item label="Χώρα"
+                        prop="country">
+            <el-input prefix-icon="fa fa-user"
+                      v-model="supplier.country"
+                      placeholder="Χώρα">
             </el-input>
           </el-form-item>
 
@@ -44,37 +66,31 @@
         <!-- RIGHT COLUMN -->
         <el-col :span="12">
 
-          <el-form-item label="Συμπληρώστε προαιρετικά σχόλια"
-                        prop="comments">
+          <el-form-item label="Όνομα εταιρείας"
+                        prop="companyName">
             <el-input type="textarea"
-                      :rows="3"
                       prefix-icon="fa fa-comment-o"
-                      v-model="supplier.comments"
-                      placeholder="Σχόλια">
+                      v-model="supplier.companyName"
+                      placeholder="Όνομα εταιρείας">
             </el-input>
           </el-form-item>
 
-          <el-form-item label="Επιλέξτε Φύλλο" prop="gender">
-            <template>
-              <el-select v-model="supplier.gender"
-                         placeholder="Φύλλο"
-                         value-key="id"
-                         filterable
-                         clearable>
-                <el-option
-                  v-for="item in genderOptions"
-                  :key="item.id"
-                  :label="item.title"
-                  :value="item">
-                </el-option>
-              </el-select>
-            </template>
+          <el-form-item label="Δ.Ο.Υ."
+                        prop="irsOffice">
+            <el-input type="textarea"
+                      prefix-icon="fa fa-comment-o"
+                      v-model="supplier.irsOffice"
+                      placeholder="Δ.Ο.Υ.">
+            </el-input>
           </el-form-item>
 
-          <el-form-item prop="active">
-            <template>
-              <el-checkbox v-model="supplier.active">Ενεργό</el-checkbox>
-            </template>
+          <el-form-item label="Α.Φ.Μ."
+                        prop="vatNumber">
+            <el-input type="textarea"
+                      prefix-icon="fa fa-comment-o"
+                      v-model="supplier.vatNumber"
+                      placeholder="Α.Φ.Μ.">
+            </el-input>
           </el-form-item>
 
         </el-col>

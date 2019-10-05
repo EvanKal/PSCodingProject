@@ -25,7 +25,7 @@
             <el-table
               :data="suppliers"
               stripe
-              style="width: 100%"
+              style="width: 100%;"
               @selection-change="onSupplierSelected">
               <el-table-column
                 v-for="(field, index) in fields"

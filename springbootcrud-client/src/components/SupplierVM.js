@@ -10,35 +10,51 @@ export default {
       supplier: initSupplier(),
       genderOptions: ['MALE', 'FEMALE'],
       rules: {
-        name: {
+        firstName: {
           required: true,
           max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
-        mobilePhone: {
+        lastName: {
           required: true,
-          min: constants.sizes.SIZE_XXS,
-          max: constants.sizes.SIZE_XS,
+          max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
-        email: {
+        address: {
+          required: true,
+          max: constants.sizes.SIZE_M,
+          trigger: 'blur'
+        },
+        city: {
           required: true,
           type: 'email',
           max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
-        active: {
-          required: false,
+        zipCode: {
+          required: true,
+          type: 'email',
+          max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
-        comments: {
-          required: false,
-          max: constants.sizes.SIZE_XL,
+        country: {
+          required: true,
+          max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
-        gender: {},
-        department: {
-          required: false,
+        companyName: {
+          required: true,
+          max: constants.sizes.SIZE_M,
+          trigger: 'blur'
+        },
+        irsOffice: {
+          required: true,
+          max: constants.sizes.SIZE_M,
+          trigger: 'blur'
+        },
+        vatNumber: {
+          required: true,
+          max: constants.sizes.SIZE_M,
           trigger: 'blur'
         }
       }
@@ -151,11 +167,14 @@ export default {
 function initSupplier () {
   return {
     id: null,
-    name: '',
-    mobilePhone: '',
-    gender: null,
-    email: '',
-    comments: '',
-    active: true,
+    firstName: '',
+    lastName: '',
+    address: '',
+    city: '',
+    zipCode: '',
+    country: '',
+    companyName: '',
+    irsOffice: '',
+    vatNumber: ''
   }
 }
