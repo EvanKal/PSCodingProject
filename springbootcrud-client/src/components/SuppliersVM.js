@@ -24,7 +24,8 @@ export default {
   },
   data: function () {
     return {
-      url: 'suppliers/search/findByQuery?query=',
+      url: `suppliers/search/findByQuery?query=`,
+      pageSize: '5',
       query: '',
       suppliers: [],
       links: {},
@@ -104,7 +105,7 @@ export default {
       this.refreshSuppliers()
     },
     refreshSuppliers () {
-      this.$http.get(this.url + this.query)
+      this.$http.get(this.url + this.query + `&size=${this.pageSize}`)
         .then(response => {
           this.suppliers = response.data._embedded.suppliers;
           this.links = response.data._links;
