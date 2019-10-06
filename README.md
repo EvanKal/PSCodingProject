@@ -1,4 +1,4 @@
-# PublicSoft Coding Project - Junior#
+# PublicSoft Coding Project - Junior
 
 **About**
 This is a simple single-page web application for storing and editing information about entities that offers reading, creation, deletion and editing affordances to the user. The front-end side of the application is built with Vue Js while the back-end is a Spring Boot Rest API that handles the transactions with the database. 
