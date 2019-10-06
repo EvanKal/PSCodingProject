@@ -27,13 +27,11 @@ export default {
         },
         city: {
           required: true,
-          type: 'email',
           max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
         zipCode: {
           required: true,
-          type: 'email',
           max: constants.sizes.SIZE_M,
           trigger: 'blur'
         },
