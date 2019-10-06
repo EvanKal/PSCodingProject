@@ -1,6 +1,7 @@
 # PublicSoft Coding Project - Junior
 
 **About**
+
 This is a simple single-page web application for storing and editing information about entities that offers reading, creation, deletion and editing affordances to the user. The front-end side of the application is built with Vue Js while the back-end is a Spring Boot Rest API that handles the transactions with the database. 
 The user may view the respective entries of two different entities (Persons and Suppliers), display information about a single entry in a modal, edit its fields or delete it. Furthermore, the Suppliers entries are displayed in a paginated format enabling the user to traverse the total of the entries five entries at a time. Also, the user may search for a Person by name or email and for a Supplier by company name or VAT number.
 
