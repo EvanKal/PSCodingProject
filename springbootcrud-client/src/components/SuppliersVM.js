@@ -27,6 +27,9 @@ export default {
       url: 'suppliers/search/findByQuery?query=',
       query: '',
       suppliers: [],
+      links: {},
+      pagenumber: '',
+      totalPages: '',
       fields: [
         {
           name: 'id',
@@ -103,7 +106,23 @@ export default {
     refreshSuppliers () {
       this.$http.get(this.url + this.query)
         .then(response => {
-          this.suppliers = response.data._embedded.suppliers
+          this.suppliers = response.data._embedded.suppliers;
+          this.links = response.data._links;
+          this.pagenumber = response.data.page.number;
+          this.totalPages = response.data.page.totalPages;
+        })
+        .catch(e => {
+          console.log('error: ')
+          console.log(e)
+        })
+    }    ,
+    loadSupplierPage (pagerequested) {
+      this.$http.get(this.links[pagerequested].href)
+        .then(response => {
+          this.suppliers = response.data._embedded.suppliers;
+          this.links = response.data._links;
+          this.pagenumber = response.data.page.number;
+          this.totalPages = response.data.page.totalPages;
         })
         .catch(e => {
           console.log('error: ')

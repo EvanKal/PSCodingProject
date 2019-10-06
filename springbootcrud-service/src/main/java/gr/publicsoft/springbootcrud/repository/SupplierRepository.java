@@ -20,6 +20,7 @@ public interface SupplierRepository extends JpaRepository<Supplier, Long> {
 
 //    List<Supplier> findByIsActive(boolean isActive);
 
+    //Slight change in the query syntax for searching by vatNumber. Set it to match query in "starts with" mode.
     @Query("SELECT s FROM Supplier s "
             + "WHERE s.companyName LIKE CONCAT('%',?1,'%') "
             + "     OR s.vatNumber LIKE CONCAT(?1,'%')")
