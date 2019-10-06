@@ -11,8 +11,7 @@
               <el-col :span="5">
               <el-input
                 v-model="query"
-                placeholder="Search"
-                autoComplete="name">
+                placeholder="Search">
               </el-input>
               </el-col>
               <el-col :span="0.2"><div class="grid-content bg-purple">&nbsp;</div></el-col>

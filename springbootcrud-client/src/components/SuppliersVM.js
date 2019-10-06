@@ -33,46 +33,46 @@ export default {
           title: 'Α/Α',
           sortField: 'id'
         },
-        {
-          name: 'firstName',
-          title: 'Όνομα',
-          sortField: 'firstName'
-        },
-        {
-          name: 'lastName',
-          title: 'Επίθετο',
-          sortField: 'lastName'
-        },
-        {
-          name: 'address',
-          title: 'Διεύθυνση',
-          sortField: 'address'
-        },
-        {
-          name: 'city',
-          title: 'Πόλη',
-          sortField: 'city'
-        },
-        {
-          name: 'zipCode',
-          title: 'Τ.Κ.',
-          sortField: 'zipCode'
-        },
-        {
-          name: 'country',
-          title: 'Χώρα',
-          sortField: 'country'
-        },
+        // {
+        //   name: 'firstName',
+        //   title: 'Όνομα',
+        //   sortField: 'firstName'
+        // },
+        // {
+        //   name: 'lastName',
+        //   title: 'Επίθετο',
+        //   sortField: 'lastName'
+        // },
+        // {
+        //   name: 'address',
+        //   title: 'Διεύθυνση',
+        //   sortField: 'address'
+        // },
+        // {
+        //   name: 'city',
+        //   title: 'Πόλη',
+        //   sortField: 'city'
+        // },
+        // {
+        //   name: 'zipCode',
+        //   title: 'Τ.Κ.',
+        //   sortField: 'zipCode'
+        // },
+        // {
+        //   name: 'country',
+        //   title: 'Χώρα',
+        //   sortField: 'country'
+        // },
         {
           name: 'companyName',
           title: 'Όνομα εταιρείας',
           sortField: 'companyName'
         },
-        {
-          name: 'irsOffice',
-          title: 'Δ.Ο.Υ.',
-          sortField: 'irsOffice'
-        },
+        // {
+        //   name: 'irsOffice',
+        //   title: 'Δ.Ο.Υ.',
+        //   sortField: 'irsOffice'
+        // },
         {
           name: 'vatNumber',
           title: 'Α.Φ.Μ.',
