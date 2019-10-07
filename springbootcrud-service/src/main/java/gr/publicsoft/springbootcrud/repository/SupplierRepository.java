@@ -16,19 +16,12 @@ import java.util.List;
 public interface SupplierRepository extends JpaRepository<Supplier, Long> {
     
 
-//    Supplier findByEmail(String email);
-
-//    List<Supplier> findByIsActive(boolean isActive);
-
     //Slight change in the query syntax for searching by vatNumber. Set it to match query in "starts with" mode.
     @Query("SELECT s FROM Supplier s "
             + "WHERE s.companyName LIKE CONCAT('%',?1,'%') "
             + "     OR s.vatNumber LIKE CONCAT(?1,'%')")
     Page<Supplier> findByQuery(@Param("query") String query, Pageable pageable);
 
-//    @Query("SELECT COUNT(p) FROM Supplier p " 
-//            + "WHERE p.isActive = true "
-//            + "     AND p.email IS NOT NULL ")
-//    Long countActiveUsers();
+
 }
 
